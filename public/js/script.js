@@ -27,6 +27,7 @@ function synthVoice(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
+  utterance.voice = synth.getVoices()[2]; // Google US English
   synth.speak(utterance);
 }
 
